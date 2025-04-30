@@ -1,5 +1,4 @@
 #include "video.h"
-#include "gba.h"
 
 void initVideo(void) {
     // Init mode 5
@@ -10,10 +9,17 @@ void initVideo(void) {
     REG_BG2PD = 256 / 2;         // 256=normal 128=scale
 }
 
+void drawPixel(int x, int y, u16 color) {
+    if (x < 0 || x >= GAME_WIDTH || y < 0 || y >= GAME_HEIGHT) {
+        return;
+    }
+    VRAM[y * SCREEN_WIDTH + x] = color;
+}
+
 void clearBackground(void) {
     for (int x = 0; x < GAME_WIDTH; x++) {
         for (int y = 0; y < GAME_HEIGHT; y++) {
-            VRAM[y * SCREEN_WIDTH + x] = RGB(31, 31, 31);
+            drawPixel(x, y, RGB(31, 31, 31));
         }
     }
 }
