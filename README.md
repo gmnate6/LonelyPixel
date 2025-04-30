@@ -1,4 +1,4 @@
-# PixelLive
+# Lonely Pixel
 
 my-gba-game/
 ├── assets/               # Raw game assets (graphics, audio, etc.)
