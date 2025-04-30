@@ -1,0 +1,28 @@
+# Ignore build artifacts and binaries
+build/
+*.elf
+*.gba
+*.sav
+*.map
+*.o
+*.d
+
+# Ignore device-specific emulator files
+*.sav.*
+
+# Ignore IDE and editor files
+.idea/
+*.iml
+.vscode/
+*.code-workspace
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore log files\ n*.log
+
+# Optional: ignore backup and temporary files
+*~
+*.tmp
+
