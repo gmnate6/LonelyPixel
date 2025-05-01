@@ -29,5 +29,5 @@ void handlePlayerInput(Player *p) {
 }
 
 void drawPlayer(const Player *p) {
-    drawBox(p->x, p->y, p->size, p->size, RGB(0, 0, 0));
+    drawBox(p->x, p->y, p->size, p->size, RGB15(0, 0, 0));
 }

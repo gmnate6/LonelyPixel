@@ -3,7 +3,7 @@
 
 #include "gba.h"
 
-#define RGB(r, g, b) ((r) + ((g)<<5) + ((b)<<10))
+#define RGB15(r, g, b) (r + (g<<5) + (b<<10))
 
 void drawPixel(int x, int y, u16 color);
 void drawBox(int x, int y, int width, int height, u16 color);

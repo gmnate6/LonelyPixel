@@ -16,5 +16,5 @@ void randomizeFoodPosition(Food *f) {
 }
 
 void drawFood(const Food *f) {
-    drawPixel(f->x, f->y, RGB(31, 0, 0));
+    drawPixel(f->x, f->y, RGB15(31, 0, 0));
 }

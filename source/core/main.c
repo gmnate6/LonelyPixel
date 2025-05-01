@@ -4,7 +4,7 @@
 
 int main() {
     initVideo();
-	initFPS(30);
+	initFPS(60);
     initGame();
 
     while (1) {
@@ -17,4 +17,5 @@ int main() {
         updateFPS();
         swapBuffers();
     }
+    return 0;
 }
