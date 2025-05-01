@@ -27,13 +27,13 @@ void initFPS(int targetFPS) {
     /* Enable Timer-2 with /256 prescaler (0x0082) */
     REG_TM2CNT_H = TM_ENABLE | TM_PRESCALE_256;
 
-    startTick           = REG_TM2CNT_L;
-    targetTicksPerFrame = (int) (TICKS_PER_SECOND / targetFPS);
+    startTick             = REG_TM2CNT_L;
+    targetTicksPerFrame   = (int) (TICKS_PER_SECOND / targetFPS);
 
-    lastFrame  = REG_TM2CNT_L >> 12;
-    frameCount = 0;
-    currentFPS = 0;
-    deltaTime  = 0.0f;
+    lastFrame             = REG_TM2CNT_L >> 12;
+    frameCount            = 0;
+    currentFPS            = 0;
+    deltaTime             = 0.0f;
 }
 
 void waitForNextFrame(void) {

@@ -7,9 +7,13 @@ typedef struct Player {
     int x;
     int y;
     int speed;
+    int size;
 } Player;
 
-void handleInput(Player *p);
+Player createPlayer(void);
+void clampPlayerToBounds(Player *p);
+void growPlayer(Player *p);
+void handlePlayerInput(Player *p);
 void drawPlayer(const Player *p);
 
 #endif

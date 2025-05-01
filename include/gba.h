@@ -31,7 +31,7 @@ extern volatile   u16* VRAM_B;
 /* ------------------------------------------------------------------ */
 /*  Input                                                             */
 /* ------------------------------------------------------------------ */
-#define KEY_INPUT      (*(volatile u16*)0x4000130)
+#define KEY_INPUT (*(volatile u16*)0x4000130)
 
 // Individual Bit Masks
 #define KEY_MASK_A        (1 << 0)
@@ -49,15 +49,15 @@ extern volatile   u16* VRAM_B;
 #define KEY_PRESSED(mask) ( !(KEY_INPUT & (mask)) )
 
 // High-Level Aliases
-#define KEY_A        KEY_PRESSED(KEY_MASK_A)
-#define KEY_B        KEY_PRESSED(KEY_MASK_B)
-#define KEY_SELECT   KEY_PRESSED(KEY_MASK_SELECT)
-#define KEY_START    KEY_PRESSED(KEY_MASK_START)
+#define KEY_A           KEY_PRESSED(KEY_MASK_A)
+#define KEY_B           KEY_PRESSED(KEY_MASK_B)
+#define KEY_SELECT      KEY_PRESSED(KEY_MASK_SELECT)
+#define KEY_START       KEY_PRESSED(KEY_MASK_START)
 
-#define KEY_RIGHT    KEY_PRESSED(KEY_MASK_RIGHT)
-#define KEY_LEFT     KEY_PRESSED(KEY_MASK_LEFT)
-#define KEY_UP       KEY_PRESSED(KEY_MASK_UP)
-#define KEY_DOWN     KEY_PRESSED(KEY_MASK_DOWN)
+#define KEY_RIGHT       KEY_PRESSED(KEY_MASK_RIGHT)
+#define KEY_LEFT        KEY_PRESSED(KEY_MASK_LEFT)
+#define KEY_UP          KEY_PRESSED(KEY_MASK_UP)
+#define KEY_DOWN        KEY_PRESSED(KEY_MASK_DOWN)
 
 #define KEY_R_SHOULDER  KEY_PRESSED(KEY_MASK_R_BTN)
 #define KEY_L_SHOULDER  KEY_PRESSED(KEY_MASK_L_BTN)
@@ -82,7 +82,7 @@ extern volatile   u16* VRAM_B;
 /* ------------------------------------------------------------------ */
 /*  Fast RAM sections                                                 */
 /* ------------------------------------------------------------------ */
-#define IN_IWRAM       __attribute__ ((section (".iwram")))
-#define IN_EWRAM       __attribute__ ((section (".ewram")))
+#define IN_IWRAM     __attribute__ ((section (".iwram")))
+#define IN_EWRAM     __attribute__ ((section (".ewram")))
 
 #endif
